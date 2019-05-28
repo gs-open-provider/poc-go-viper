@@ -3,16 +3,16 @@ package main
 import (
 	"fmt"
 
-	i "github.com/gs-open-provider/poc-go-viper/internal"
-	c "github.com/gs-open-provider/poc-go-viper/models"
+	c "github.com/gs-open-provider/poc-go-viper/internal/configs"
+	m "github.com/gs-open-provider/poc-go-viper/models"
 	"github.com/spf13/viper"
 )
 
 func main() {
 	// Initialize Viper across the application
-	i.InitializeViper()
+	c.InitializeViper()
 
-	var configuration c.Configurations
+	var configuration m.Configurations
 
 	// Set undefined variables
 	viper.SetDefault("database.dbname", "test_db")
